@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>APIS India Limited — Salary MIS Automation</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#faf7f0;--card:#fff;--tx:#1b1f24;--mu:#5b6573;--ac:#c27c00;--bd:#e3d9c6;--hd:#fbf0d4;--ok:#157a3d;--wr:#9a5b00;--er:#b42318;--yl:#fff4b8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17140e;--card:#211c13;--tx:#e8ebf0;--mu:#9aa5b4;--ac:#f2b84b;--bd:#4a3f2a;--hd:#3a2f17;--ok:#4cc27a;--wr:#e0a23b;--er:#f27a6e;--yl:#4a4210}}
+:root[data-theme="dark"]{--bg:#17140e;--card:#211c13;--tx:#e8ebf0;--mu:#9aa5b4;--ac:#f2b84b;--bd:#4a3f2a;--hd:#3a2f17;--ok:#4cc27a;--wr:#e0a23b;--er:#f27a6e;--yl:#4a4210}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0 0 2px}h2{font-size:15px;margin:0 0 10px}.sub{color:var(--mu);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.drop{border:2px dashed var(--bd);border-radius:10px;padding:16px;text-align:center;cursor:pointer}
+.drop.ok{border-color:var(--ok)}.drop b{display:block}.drop small{color:var(--mu)}
+label{display:block;color:var(--mu);font-size:12px;margin-bottom:3px}
+input[type=number],input[type=month],input[type=password],input[type=text],select{width:100%;padding:7px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx)}
+button{background:var(--ac);color:#1b1305;font-weight:600;border:0;border-radius:8px;padding:10px 18px;font-size:14px;cursor:pointer}button:disabled{opacity:.45;cursor:default}
+.msg{padding:8px 10px;border-radius:6px;margin:6px 0;font-size:13px;border:1px solid var(--bd)}.ok{color:var(--ok)}.wr{color:var(--wr)}.er{color:var(--er)}
+.scroll{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{border:1px solid var(--bd);padding:4px 7px;text-align:right;white-space:nowrap}th{background:var(--hd)}td:first-child,th:first-child{text-align:left}
+tr.t td{font-weight:700;background:var(--hd)}td.in{background:var(--yl)}
+.hold{max-height:320px;overflow:auto}.hold td{text-align:left}.hold td:last-child{text-align:right}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:#2b1d0e;color:#fff;border-bottom:4px solid #f2b84b;border-radius:10px;padding:14px 18px;margin-bottom:16px}
+.brand{display:flex;align-items:center;gap:12px}.logo{background:#f2b84b;color:#2b1d0e;font-weight:800;letter-spacing:1px;border-radius:8px;padding:8px 10px}
+.brand b{display:block;font-size:16px;letter-spacing:.6px}.brand small{color:#e8d9b8}.top .t{font-size:15px;font-weight:600;color:#f2b84b}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}.kpi{border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:8px;padding:8px 12px;background:var(--bg)}
+.kpi small{color:var(--mu);display:block}.kpi b{font-size:18px}.ghost{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+h2{border-left:4px solid var(--ac);padding-left:8px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:6px 0 10px}
+.tab{background:var(--card);color:var(--tx);border:1px solid var(--bd);padding:8px 14px;font-weight:500}.tab.on{background:var(--ac);color:#1b1305;border-color:var(--ac);font-weight:700}
+.br{display:grid;grid-template-columns:minmax(90px,170px) 1fr 90px;gap:8px;align-items:center;margin:5px 0}.br span{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.br b{text-align:right;font-size:12.5px}
+.bt{background:var(--hd);border-radius:5px;height:12px;overflow:hidden;min-width:70px}.bt i{display:block;height:100%;background:var(--ac)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}h3{font-size:13px;margin:14px 0 4px;color:var(--mu)}
+</style></head><body><main>
+<header class="top"><div class="brand"><span class="logo">APIS</span><div><b>APIS INDIA LIMITED</b><small>People &amp; Culture · Payroll &amp; Compliances</small></div></div><div class="t">Monthly Salary MIS — HO &amp; Sales</div></header>
+<p class="sub">Upload the HO and Sales salary sheets (same format every month). The MIS is built in the approved layout, checked, and exported to Excel. Files are processed in your browser only.</p>
+
+<div id="sys"></div><div class="card"><h2>1. Upload salary sheets</h2>
+<div class="grid">
+<div class="drop" id="d-ho"><b>HO Employee's Salary Sheet (.xlsx)</b><small id="s-ho">Click or drop file</small><input type="file" id="f-ho" accept=".xlsx,.xlsm" hidden></div>
+<div class="drop" id="d-sales"><b>Sales Salary Sheet (.xlsx, sheet "APIS")</b><small id="s-sales">Click or drop file</small><input type="file" id="f-sales" accept=".xlsx,.xlsm" hidden></div>
+<div><label>MIS month</label><input type="month" id="month"></div>
+<div><label>File password (only if a file is protected)</label><input type="password" id="pw1" autocomplete="off"></div>
+<div><label>2nd password (optional, if files differ)</label><input type="password" id="pw2" autocomplete="off"></div></div>
+<p style="margin:12px 0 0"><button id="sub" disabled>Submit &amp; Build MIS</button> <button id="rst" class="ghost">Reset</button> <span class="sub">Select both files, then click Submit — the MIS is built automatically.</span></p><div id="msgs"></div></div>
+
+<div class="card" id="jkcard"><h2>2. Manual inputs — not part of the salary sheets (optional)</h2>
+<div class="grid"><div><label>Promotor (JK) payout</label><input type="number" id="jk" min="0" placeholder="e.g. 976500"></div>
+<div><label>JK manpower count</label><input type="number" id="jkm" min="0"></div>
+<div><label>HRA</label><input type="number" id="hra" min="0"></div>
+<div><label>Hiring fees</label><input type="number" id="hire" min="0"></div>
+<div><label>Directors: manual Arrears/Var Pay/Reim (if any)</label><input type="number" id="dirc"></div>
+<div><label>Remark on Other Deduction rows (HOLD&amp;TDS sheet)</label><input type="text" id="othrem" value="Reconcilation in arrear sheet"></div></div>
+<p class="sub" style="margin:8px 0 0">Leave blank if not available — the Sales Total then excludes this block and the export carries a visible warning.</p></div>
+
+<nav id="tabs" class="tabs" hidden></nav><div class="card pg" id="pg-over" hidden></div><div class="card pg" id="pg-dept" hidden></div><div class="card pg" id="pg-sales" hidden></div><div class="card pg" id="pg-ded" hidden></div>
+<div class="card pg" id="holdcard" hidden><h2>Hold review</h2>
+<p class="sub">Employees with a Remark in the salary sheet. Remarks Resigned / Absconding / Hold / ATL / Terminate / Accident are held by default (their salary Net Pay is held back). Tick/untick to match payroll's actual holds.</p>
+<div class="hold scroll"><table id="holdt"></table></div></div>
+
+<div class="card pg" id="loancard" hidden><h2>Loan split — Principal / Interest</h2>
+<p class="sub">Loan rows of the HOLD&amp;TDS → Deductions block. Enter the Principal and Interest of each loan EMI as per the loan register (filled automatically if the salary sheet has Principal / Interest columns). Leave blank to keep the cell empty.</p>
+<div class="hold scroll"><table id="loant"></table></div></div>
+<div class="card pg" id="outcard" hidden><h2>Cross-checks</h2><div id="checks"></div></div>
+<div class="card pg" id="miscard" hidden><h2>MIS report — approved format</h2><div id="fnote"></div><div id="kpi" class="kpis"></div><div class="scroll"><table id="mis"></table></div>
+<p style="margin:12px 0 0"><button id="exp">Export MIS to Excel</button> <button class="exd ghost">Export Dashboard Summary (Excel)</button> <span id="expmsg" class="sub"></span></p></div>
+<p class="sub" style="text-align:center;margin-top:18px">APIS India Limited · Confidential — for internal use only</p></main>
+<script>
+function loadLib(urls,test){return new Promise(res=>{let i=0;const next=()=>{if(test()){res(true);return}if(i>=urls.length){res(false);return}const s=document.createElement('script');s.src=urls[i++];s.onload=()=>test()?res(true):next();s.onerror=next;document.head.appendChild(s)};next()})}
+window.LIBS=Promise.all([loadLib(['libs/xlsx.full.min.js','https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js','https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js'],()=>window.XLSX),loadLib(['libs/exceljs.min.js','https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js','https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js'],()=>window.ExcelJS)]);
+</script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=n=>(Math.round(n)||0).toLocaleString('en-IN');
+const ci=s=>{let n=0;for(const c of s)n=n*26+c.charCodeAt(0)-64;return n-1};
+const FIND={var:/^var[a-z]*le/i,arr:/arrear/i,gross:/^(total gross earned|fixed gross earning)/i,reimb:/gross\s*reimb/i,tds:/^tds$/i,pf:/^pf\s*employee/i,esic:/^esic\s*employee/i,loan:/^loan amount/i,adv:/^sal(ary)?\s*advance/i,oth:/^other deduction/i,nps:/^nps$/i,ded:/^total deductions/i,net:/^salary net pay/i,epf:/^employer pf/i,eesic:/^(employer|emloyer) esic/i,rem:/^remarks/i};
+function mapCols(h){const col={code:1,name:2,dept:3},miss=[];
+  for(const k in FIND){col[k]=h.findIndex((x,j)=>j>=38&&FIND[k].test(String(x??'').trim()));if(col[k]<0&&k!=='rem')miss.push(k)}
+  col.fx=[5,4,3,2,1].map(d=>col.var-d);
+  col.lp=h.findIndex((x,j)=>j>=38&&/^(loan\s*)?principal/i.test(String(x??'').trim()));col.li=h.findIndex((x,j)=>j>=38&&/^(loan\s*)?interest/i.test(String(x??'').trim()));
+  col.flag=h.findIndex((x,j)=>j<20&&/^esic$/i.test(String(x??'').trim()));col.ac=h.findIndex((x,j)=>j>=20&&j<40&&/gross\s*earn/i.test(String(x??'')));
+  if(col.var>=0&&(!/basic/i.test(h[col.fx[0]]??'')||!/special/i.test(h[col.fx[4]]??'')))miss.push('earned components (Basic..Special) before Variable');
+  if(!/employee code/i.test(h[1]??'')||!/name/i.test(h[2]??'')||!/dep/i.test(h[3]??''))miss.push('Employee Code / Name / Department');
+  return{col,miss}}
+const HO_ORDER=['Admin & Facilities','Business Excellence','Company Secretarial','Export','Finance & Accounts','Information Technology','Manufacturing','Marketing','New Product Development','People & Culture','Procurement','Sales','Supply Chain Management'];
+const MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const HOLD_RE=/resign|abscond|hold|\batl\b|terminat|accident/i;
+const S={ho:null,sales:null,warn:{ho:[],sales:[]},hold:new Set(),split:{}};
+const rnd=x=>Math.sign(x)*Math.round(Math.abs(x)+1e-9);
+const n=x=>{if(typeof x==='number')return isFinite(x)?x:0;if(x==null||x==='')return 0;const v=parseFloat(String(x).replace(/,/g,''));return isNaN(v)?0:v};
+
+async function load(f,kind){
+  if(typeof XLSX==='undefined')throw Error('The Excel reader library could not be loaded (your network may block cdnjs.cloudflare.com and cdn.jsdelivr.net).');
+  let buf=await f.arrayBuffer();const u=new Uint8Array(buf);
+  if(u[0]===0xD0&&u[1]===0xCF)buf=await unlock(buf);
+  const names=XLSX.read(buf,{type:'array',bookSheets:true}).SheetNames;
+  const sn=kind==='ho'?names.find(x=>!/retainer/i.test(x)):(names.find(x=>/apis/i.test(x))||names.find(x=>!/retainer/i.test(x)));
+  let wb=XLSX.read(buf,{type:'array',sheets:sn});if(!wb.Sheets||!wb.Sheets[sn])wb=XLSX.read(buf,{type:'array'});
+  const ws0=wb.Sheets[sn],dr=XLSX.utils.decode_range(ws0['!ref']||'A1'),rows=XLSX.utils.sheet_to_json(ws0,{header:1,raw:true,defval:null,range:{s:{r:0,c:0},e:dr.e}});
+  const h=rows.slice(0,8).findIndex(r=>/employee\s*code/i.test(String(r[1]||'')));
+  if(h<0)throw Error('Header "Employee Code" not found in column B (first 8 rows). Is this the right file/sheet?');
+  const{col,miss}=mapCols(rows[h]);
+  if(miss.length)throw Error('Required column(s) not found by header name: '+miss.join(', ')+'. The sheet layout has changed — please check the file.');
+  const warn=[];if(col.rem<0)warn.push('No "Remarks" column found — hold list cannot be pre-selected');
+  const emps=[],junk=[];let lastI=h;
+  for(let i=h+1;i<rows.length;i++){const r=rows[i];if(!/^[A-Za-z]{2,4}\d+/.test(String(r[col.code]||'')))continue;if(!r[col.dept])continue;
+    const e={code:String(r[col.code]).trim(),name:String(r[col.name]||'').trim(),dept:String(r[col.dept]).trim(),rem:col.rem<0?'':String(r[col.rem]??'').trim(),fixed:col.fx.reduce((a,c)=>a+n(r[c]),0),flag:col.flag>=0&&/^yes$/i.test(String(r[col.flag]??'').trim()),hasFlag:col.flag>=0&&col.ac>=0,ac:col.ac>=0?n(r[col.ac]):0,ap:n(r[col.fx[0]]),at:n(r[col.fx[4]]),lp:col.lp>=0&&r[col.lp]!=null&&r[col.lp]!==''?n(r[col.lp]):null,li:col.li>=0&&r[col.li]!=null&&r[col.li]!==''?n(r[col.li]):null};
+    for(const k of['var','arr','gross','reimb','tds','pf','esic','loan','adv','oth','nps','ded','net','epf','eesic']){const rw=r[col[k]];e[k]=n(rw);if(typeof rw==='string'&&rw.trim()!==''&&isNaN(parseFloat(rw.replace(/,/g,''))))junk.push({code:e.code,k,v:rw.trim()})}emps.push(e);lastI=i}
+  if(!emps.length)throw Error('No employee rows found.');
+  const pre=emps.filter(e=>kind==='ho'?/^HO/i.test(e.code):/^SL/i.test(e.code)).length;
+  if(pre<emps.length*.8)throw Error(kind==='ho'?'This does not look like the HO sheet (employee codes should start with HO). Did you upload the Sales file here?':'This does not look like the Sales sheet (employee codes should start with SL). Did you upload the HO file here?');
+  let tot=null;for(let i=lastI+1;i<Math.min(rows.length,lastI+8);i++){const r=rows[i];if(!String(r[col.code]??'').trim()&&typeof r[col.gross]==='number'&&r[col.gross]>0){tot={gross:n(r[col.gross]),ded:n(r[col.ded]),net:n(r[col.net]),epf:typeof r[col.epf]==='number'?r[col.epf]:null,eesic:typeof r[col.eesic]==='number'?r[col.eesic]:null,row:i+1};break}}
+  return{emps,warn,sheet:sn,fileName:f.name,tot,junk}
+}
+const cat=(...a)=>{const o=new Uint8Array(a.reduce((s,x)=>s+x.length,0));let p=0;for(const x of a){o.set(x,p);p+=x.length}return o};
+const rd32=s=>{const d=new DataView(s.buffer,s.byteOffset,s.byteLength),o=[];for(let i=0;i+4<=s.length;i+=4)o.push(d.getUint32(i,true));return o};
+function cfb(u){const dv=new DataView(u.buffer,u.byteOffset,u.byteLength),ss=1<<dv.getUint16(30,true),mss=1<<dv.getUint16(32,true),END=0xFFFFFFFE;
+  const dirStart=dv.getUint32(48,true),cutoff=dv.getUint32(56,true),mfStart=dv.getUint32(60,true),nmf=dv.getUint32(64,true),dfStart=dv.getUint32(68,true);let ndf=dv.getUint32(72,true);
+  const sec=i=>u.subarray((i+1)*ss,(i+2)*ss);let difat=rd32(u.subarray(76,512)),d=dfStart;
+  while(d<END&&ndf-->0){const v=rd32(sec(d));difat=difat.concat(v.slice(0,-1));d=v[v.length-1]}
+  let fat=[];for(const x of difat)if(x<END)fat=fat.concat(rd32(sec(x)));
+  const chain=s=>{const p=[];let i=s;while(i<END&&i<fat.length){p.push(sec(i));i=fat[i]}return cat(...p)};
+  const dirs=chain(dirStart),ents=[];
+  for(let k=0;k+128<=dirs.length;k+=128){const e=new DataView(dirs.buffer,dirs.byteOffset+k,128),nl=e.getUint16(64,true);if(!nl)continue;let name='';for(let j=0;j<nl-2;j+=2)name+=String.fromCharCode(e.getUint16(j,true));ents.push({name,type:dirs[k+66],start:e.getUint32(116,true),size:e.getUint32(120,true)})}
+  const mini=chain(ents[0].start).subarray(0,ents[0].size),mfat=nmf?rd32(chain(mfStart)):[];
+  const mchain=(s,size)=>{const p=[];let i=s;while(i<END&&i<mfat.length){p.push(mini.subarray(i*mss,(i+1)*mss));i=mfat[i]}return cat(...p).subarray(0,size)};
+  const res={};for(const e of ents)if(e.type===2)res[e.name]=e.size<cutoff?mchain(e.start,e.size):chain(e.start).subarray(0,e.size);return res}
+const sha=async(a,b)=>new Uint8Array(await crypto.subtle.digest(a,b));
+async function aesDec(key,iv,data){const last=data.subarray(data.length-16),x=Uint8Array.from(last,v=>v^16);
+  const e=new Uint8Array(await crypto.subtle.encrypt({name:'AES-CBC',iv:new Uint8Array(16)},key,x)).subarray(0,16);
+  return new Uint8Array(await crypto.subtle.decrypt({name:'AES-CBC',iv},key,cat(data,e)))}
+async function decryptXlsx(buf,pw){
+  const st=cfb(new Uint8Array(buf)),info=st['EncryptionInfo'],pkg=st['EncryptedPackage'];if(!info||!pkg)throw Error('not an encrypted Excel package');
+  const xml=new TextDecoder().decode(info.subarray(8)),A=(s,a)=>s.match(new RegExp('\\b'+a+'="([^"]*)"'))[1],b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const HN={SHA512:'SHA-512',SHA384:'SHA-384',SHA256:'SHA-256',SHA1:'SHA-1'},kd=xml.match(/<keyData[^>]*>/),ek=xml.match(/<(?:p:)?encryptedKey[^>]*>/);
+  if(!kd||!ek)throw Error('unsupported protection type (only modern Excel password protection is supported)');
+  const ksalt=b64(A(kd[0],'saltValue')),kalg=HN[A(kd[0],'hashAlgorithm')],kbits=+A(kd[0],'keyBits'),salt=b64(A(ek[0],'saltValue')),ealg=HN[A(ek[0],'hashAlgorithm')],spin=+A(ek[0],'spinCount'),ebits=+A(ek[0],'keyBits'),encKey=b64(A(ek[0],'encryptedKeyValue'));
+  const pwb=new Uint8Array(pw.length*2);for(let i=0;i<pw.length;i++){pwb[2*i]=pw.charCodeAt(i)&255;pwb[2*i+1]=pw.charCodeAt(i)>>8}
+  let h=await sha(ealg,cat(salt,pwb));for(let i=0;i<spin;i++){const c=new Uint8Array(4);new DataView(c.buffer).setUint32(0,i,true);h=await sha(ealg,cat(c,h))}
+  let k=(await sha(ealg,cat(h,Uint8Array.from([0x14,0x6e,0x0b,0xe7,0xab,0xac,0xd0,0xd6])))).subarray(0,ebits/8);if(k.length<ebits/8)k=cat(k,new Uint8Array(ebits/8-k.length).fill(0x36));
+  const kk=await crypto.subtle.importKey('raw',k,'AES-CBC',false,['encrypt','decrypt']);
+  const secret=(await aesDec(kk,salt.subarray(0,16),encKey)).subarray(0,kbits/8),sk=await crypto.subtle.importKey('raw',secret,'AES-CBC',false,['encrypt','decrypt']);
+  const size=Number(new DataView(pkg.buffer,pkg.byteOffset).getBigUint64(0,true)),body=pkg.subarray(8),out=new Uint8Array(body.length);
+  for(let i=0;i<body.length;i+=4096){let seg=body.subarray(i,i+4096);const n0=seg.length,pad=(16-n0%16)%16;if(pad)seg=cat(seg,new Uint8Array(pad));
+    const ix=new Uint8Array(4);new DataView(ix.buffer).setUint32(0,i/4096,true);const iv=(await sha(kalg,cat(ksalt,ix))).subarray(0,16);out.set((await aesDec(sk,iv,seg)).subarray(0,n0),i)}
+  const res=out.subarray(0,size);if(res[0]!==0x50||res[1]!==0x4b)throw Error('wrong password');return res.slice().buffer}
+async function unlock(buf){const pws=[$('#pw1').value,$('#pw2').value].filter(x=>x);
+  if(!pws.length)throw Error('This file is password-protected. Enter its password in the "File password" box and click Submit again (or remove the password in Excel).');
+  if(typeof crypto==='undefined'||!crypto.subtle)throw Error('This browser cannot unlock protected files here — remove the password in Excel and upload again.');
+  let last;for(const p of pws){try{return await decryptXlsx(buf,p)}catch(e){last=e}}
+  throw Error('Could not unlock the file ('+(last&&last.message||'wrong password')+'). Check the password, or remove it in Excel and upload again.')}
+function detectMonth(name){let m=name.match(/(20\d\d)[._\- ]?(0[1-9]|1[0-2])/);if(m)return m[1]+'-'+m[2];
+  for(let i=0;i<12;i++){const r=name.match(new RegExp(MON[i].slice(0,3)+'[a-z]*[\\s,_\\-\']*(20)?(\\d\\d)','i'));if(r)return '20'+r[2]+'-'+String(i+1).padStart(2,'0')}return ''}
+function wire(kind){const d=$('#d-'+kind),fi=$('#f-'+kind);d.onclick=()=>fi.click();fi.onclick=e=>e.stopPropagation();
+  d.ondragover=e=>e.preventDefault();d.ondrop=e=>{e.preventDefault();if(e.dataTransfer.files[0])go(kind,e.dataTransfer.files[0])};fi.onchange=()=>fi.files[0]&&go(kind,fi.files[0])}
+function go(kind,f){S.files=S.files||{};S.files[kind]=f;S[kind]=null;$('#s-'+kind).textContent='Selected: '+f.name;$('#s-'+kind).className='';$('#d-'+kind).classList.add('ok');if(!$('#month').value){const m=detectMonth(f.name);if(m)$('#month').value=m}$('#sub').disabled=!(S.files.ho&&S.files.sales);render()}
+async function parseKind(kind){await window.LIBS;const f=S.files[kind],sm=$('#s-'+kind),d=$('#d-'+kind);sm.textContent='Reading…';d.classList.remove('ok');
+  try{const r=await load(f,kind);S[kind]=r;d.classList.add('ok');sm.textContent=`${f.name} — ${r.emps.length} employees (sheet "${r.sheet}")`;
+    if(!$('#month').value){const m=detectMonth(f.name);if(m)$('#month').value=m}
+    S.hold=new Set([...(S.ho?.emps||[]),...(S.sales?.emps||[])].filter(e=>HOLD_RE.test(e.rem)).map(e=>e.code));
+    for(const e of r.emps)if(e.loan!==0&&(e.lp!=null||e.li!=null))S.split[e.code]={p:e.lp!=null?String(e.lp):'',i:e.li!=null?String(e.li):''};
+  }catch(e){S[kind]=null;sm.textContent='Failed: '+e.message;sm.className='er'}
+  render()}
+
+function sumO(os,keys){const o={};for(const k of keys)o[k]=os.reduce((a,x)=>a+n(x?.[k]),0);return o}
+const KEYS='BCDEFGHIJKLMNOPQRUV'.split('');
+function agg(list){const o={B:0,C:0,E:0,F:0,G:0,H:0,I:0,J:0,K:0,M:0,N:0,O:0,P:0,U:0,V:0};
+  for(const e of list){o.U+=e.epf;o.V+=e.eesic;o.B+=e.fixed;o.C+=e.arr;o.E+=e.tds;o.F+=e.pf;o.G+=e.esic;o.H+=e.loan+e.adv+e.oth;o.J+=e.nps;o.M++;o.N+=e.reimb;o.O+=e.var;if(S.hold.has(e.code)){o.K+=e.net-e.var;o.P+=e.var}}return der(o)}
+function der(o){o.D=n(o.B)+n(o.C);o.L=o.D-(n(o.E)+n(o.F)+n(o.G)+n(o.H)+n(o.I)+n(o.J)+n(o.K));o.Q=o.D+n(o.N)+n(o.O);o.R=n(o.N)+o.L+n(o.O)-n(o.P);return o}
+const key=s=>s.trim().toLowerCase();
+function model(){
+  const ho=S.ho.emps,sl=S.sales.emps,dirs=ho.filter(e=>key(e.dept)==='director office'),rest=ho.filter(e=>!dirs.includes(e));
+  const warn=[],names=[...HO_ORDER];
+  rest.forEach(e=>{if(!names.some(x=>key(x)===key(e.dept))){names.push(e.dept);warn.push(`New HO department "${e.dept}" added as an extra row`)}});
+  const L=[];let id=0;const add=l=>{l.id=id++;L.push(l);return l};
+  const hoRows=names.map(nm=>add({label:nm,kind:'row',o:agg(rest.filter(e=>key(e.dept)===key(nm))),ho:1}));
+  const totA=add({label:'Total A',kind:'sum',from:hoRows[0],to:hoRows.at(-1),o:sumO(hoRows.map(l=>l.o),KEYS),t:1});
+  const dO=agg(dirs);dO.C+=n($('#dirc').value);der(dO);const dir=add({label:'Directors (B)',kind:'row',o:dO});
+  const totAB=add({label:'Total (A+B)',kind:'sum',from:totA,to:dir,o:sumO([totA.o,dir.o],KEYS),t:1});
+  const grand=totAB;
+  const sn=[['Alternate Channels',e=>/alternate/i.test(e.dept)],['GT',e=>/general\s*trade|^gt$/i.test(e.dept)]];
+  const other=sl.filter(e=>!sn.some(([,f])=>f(e)));
+  [...new Set(other.map(e=>e.dept))].forEach(d=>{sn.push([d,x=>x.dept===d]);warn.push(`New Sales department "${d}" added as an extra row`)});
+  const sRows=sn.map(([lb,f])=>add({label:lb,kind:'row',o:agg(sl.filter(f)),sales:1}));
+  const totS=add({label:'TOTAL (A)',kind:'sum',from:sRows[0],to:sRows.at(-1),o:sumO(sRows.map(l=>l.o),KEYS),t:1});
+  const m=(l,B,x)=>{const o={B,M:x};der(o);return add({label:l,kind:'memo',o})};
+  const jk=n($('#jk').value),jkm=n($('#jkm').value),hra=n($('#hra').value),hire=n($('#hire').value);
+  const J=m('Promotor (JK)',jk,jkm),H=m('HRA',hra,0),Hi=m('Hiring Fees @1000 per parameter',hire,0);
+  const sv=m('Service Charges @3%',rnd((jk+hra)*3/100),0),e13=m('EPF@13%',jk*.13,0),e325=m('ESIC @3.25%',rnd((jk+hra)*325/10000),0);
+  J.inp=['B','M'];H.inp=['B'];Hi.inp=['B'];
+  const totC=add({label:'TOTAL (B)',kind:'sum',from:J,to:e325,o:sumO([J,H,Hi,sv,e13,e325].map(l=>l.o),KEYS),t:1,m:1});
+  const tot=add({label:'Total',kind:'add',parts:[totS,totC],o:sumO([totS.o,totC.o],KEYS),t:1,m:1});
+  return{L,warn,hoRows,sRows,totA,dir,totAB,grand,totS,jk:J,hra:H,hire:Hi,sv,e13,e325,totC,tot,dirs,ho,sl}
+}
+const rdE=(v,m)=>Number.isInteger(v)?(m==='ROUNDUP'?Math.floor((v+9999)/10000):Math.floor((v+5000)/10000)):(m==='ROUNDUP'?Math.ceil(v/10000-1e-9):Math.floor(v/10000+.5+1e-9));
+function esicRule(E,bp,fld){const C=[];for(const el of['flag','AC<21000'])for(const bs of['AW','AP+AT'])for(const m of['ROUND','ROUNDUP'])C.push({el,bs,m,ok:0});
+  const fit=(c,e)=>{const el=c.el==='flag'?e.flag:e.ac<21000,b=c.bs==='AW'?e.gross:e.ap+e.at;return(el?rdE(b*bp,c.m):0)===e[fld]};
+  for(const e of E)for(const c of C)if(fit(c,e))c.ok++;
+  const mx=Math.max(...C.map(c=>c.ok)),top=C.filter(c=>c.ok===mx),mods=[...new Set(top.map(c=>c.m))],bad=E.filter(e=>!top.some(c=>fit(c,e)));
+  return{N:E.length,top,mods,bad,desc:top.length===1?`${top[0].el==='flag'?'ESIC flag = YES':'gross earnings < 21,000'}, on ${top[0].bs==='AW'?'gross earned':'basic + special allowance'}, ${top[0].m}`:`${top.length} equivalent rules fit`}}
+function checks(M){
+  const out=[],all=[...M.ho,...M.sl],ck=(ok,t,d)=>out.push({ok,t,d});
+  for(const k of['ho','sales'])S.warn[k]=S[k].warn;
+  const g1=all.filter(e=>Math.abs(e.gross-(e.fixed+e.var+e.arr))>1),g2=all.filter(e=>Math.abs(e.net-(e.gross-e.ded))>1),
+  g3=all.filter(e=>Math.abs(e.ded-(e.tds+e.pf+e.esic+e.loan+e.adv+e.oth+e.nps))>1);
+  ck(!g1.length,'Gross = fixed earnings + variable + arrears (every employee)',g1.length?g1.length+' mismatch: '+g1.slice(0,5).map(e=>e.code).join(', '):`${all.length} employees OK`);
+  ck(!g3.length,'Total deductions = sum of deduction columns',g3.length?g3.length+' mismatch: '+g3.slice(0,5).map(e=>e.code).join(', '):'OK');
+  ck(!g2.length,'Salary Net Pay = Gross Earning − Total Deduction (every employee)',g2.length?g2.length+' mismatch: '+g2.slice(0,5).map(e=>e.code).join(', '):'OK');
+  for(const[k,lb]of[['ho','HO'],['sales','Sales']]){const T=S[k].tot,E=S[k].emps;if(!T){ck(false,lb+' sheet: source total row not found, tie-out skipped','');continue}
+    const g=E.reduce((a,e)=>a+e.gross,0),d=E.reduce((a,e)=>a+e.ded,0),nt=E.reduce((a,e)=>a+e.net,0),ok=Math.abs(g-T.gross)<=1&&Math.abs(d-T.ded)<=1&&Math.abs(nt-T.net)<=1;
+    ck(ok,lb+` sheet: employee rows tie to the sheet's own total row ${T.row} (no employee missed)`,ok?`gross ${fmt(g)}, net pay ${fmt(nt)}`:`rows: gross ${fmt(g)}, net ${fmt(nt)} vs total row: gross ${fmt(T.gross)}, net ${fmt(T.net)}`);
+    const eP=E.reduce((a,e)=>a+e.epf,0),eE=E.reduce((a,e)=>a+e.eesic,0),ok2=(T.epf===null||Math.abs(eP-T.epf)<=1)&&(T.eesic===null||Math.abs(eE-T.eesic)<=1);
+    if(T.epf!==null||T.eesic!==null)ck(ok2,lb+" sheet: Employer PF / Employer ESIC totals tie to the sheet's total row",ok2?`${fmt(eP)} / ${fmt(eE)}`:`employee rows ${fmt(eP)} / ${fmt(eE)} vs total row ${fmt(T.epf)} / ${fmt(T.eesic)} \u2014 a total-row formula may have been overwritten`)}
+  const NL={var:'Variable',arr:'Arrear',gross:'Gross',reimb:'Reimbursement',tds:'TDS',pf:'PF',esic:'Employee ESIC',loan:'Loan',adv:'Advance',oth:'Other deduction',nps:'NPS',ded:'Total deductions',net:'Net pay',epf:'Employer PF',eesic:'Employer ESIC'};
+  for(const[k,lb]of[['ho','HO'],['sales','Sales']]){const J=S[k].junk||[];ck(!J.length,lb+': no text typed into numeric columns',J.length?`${J.length} cell(s): `+J.slice(0,6).map(j=>`${j.code} ${NL[j.k]||j.k} = "${j.v}"`).join('; ')+' \u2014 read as 0; restore the cell/formula in the salary sheet':'OK')}
+  const neg=all.filter(e=>e.net<0);ck(!neg.length,'No negative Net Pay',neg.length?neg.map(e=>e.code).join(', '):'OK');
+  const seen={},dup=all.filter(e=>seen[e.code]?1:(seen[e.code]=1,0));ck(!dup.length,'No duplicate employee codes',dup.length?dup.map(e=>e.code).join(', '):'OK');
+  const G=sumO(all,['gross','reimb','net']),held=all.filter(e=>S.hold.has(e.code)),hs=held.reduce((a,e)=>a+e.net,0);
+  ck(Math.abs(M.grand.o.Q+M.totS.o.Q-(G.gross+G.reimb+n($('#dirc').value)))<1,'MIS Total Gross = Σ source gross + reimbursement',fmt(M.grand.o.Q+M.totS.o.Q)+' vs '+fmt(G.gross+G.reimb));
+  ck(Math.abs(M.grand.o.R+M.totS.o.R-(G.net+G.reimb-hs+n($('#dirc').value)))<1,'MIS Total Payout = Σ Net Pay + reimbursement − hold',fmt(M.grand.o.R+M.totS.o.R)+' vs '+fmt(G.net+G.reimb-hs));
+  const EE=sumO(all,['epf','eesic']);ck(Math.abs(M.totAB.o.U+M.totS.o.U-EE.epf)<1&&Math.abs(M.totAB.o.V+M.totS.o.V-EE.eesic)<1,'ER PF / ER ESIC totals tie to the salary sheets (employer contributions)',fmt(EE.epf)+' / '+fmt(EE.eesic));
+  ck(true,`Hold: ${held.length} employees, ${fmt(hs)}`,'see the Hold Review tab');
+  {const C={},X=(l,k)=>n(lineVals(M,l,fmode(),C)[k]),mis=k=>X(M.totAB,k)+X(M.totS,k),nz=x=>{const s=String(x??'').trim();return s===''||isNaN(+s)?null:+s};
+   const dl=dedRows(M,null,nz),sumA=a=>a.reduce((s,x)=>s+x,0),bl=[['Hold block','L',held.map(e=>e.net)],['TDS block','F',all.map(e=>e.tds)],['Deductions block','I',dl.map(x=>x[3])],['NPS block','K',all.map(e=>e.nps)]];
+   const bad=bl.filter(([,k,a])=>Math.abs(sumA(a)-mis(k))>=1);
+   ck(!bad.length,'HOLD&TDS sheet totals tie to the MIS (Hold, TDS, Adv/Loan/Other, NPS columns)',bad.length?bad.map(([t,k,a])=>`${t} ${fmt(sumA(a))} vs MIS ${fmt(mis(k))}`).join('; '):bl.map(([t,k,a])=>`${t.replace(' block','')} ${fmt(sumA(a))}`).join(' · '));
+   const lo=dl.filter((x,i)=>all.find(e=>e.code===x[0])?.loan===x[3]&&(x[4]!==null||x[5]!==null)),badS=lo.filter(x=>x[4]!==null&&x[5]!==null&&Math.abs(x[4]+x[5]-x[3])>=1),nLoan=all.filter(e=>e.loan!==0).length,nEnt=all.filter(e=>e.loan!==0&&nz((S.split[e.code]||{}).p)!==null).length;
+   if(badS.length)ck(false,'Loan split: Principal + Interest differs from the loan EMI for '+badS.length+' row(s)',badS.map(x=>`${x[0]}: ${fmt(x[4])} + ${fmt(x[5])} ≠ ${fmt(x[3])}`).join('; '));
+   if(nLoan)out.push({ok:nEnt===nLoan,t:`Loan split: Principal entered for ${nEnt} of ${nLoan} loan row(s)`,d:nEnt===nLoan?'':'see the Loan Split tab; blank cells stay empty in the HOLD&TDS sheet'})}
+  for(const w of M.warn)ck(false,w,'');
+  for(const k of['ho','sales'])for(const w of S.warn[k])ck(false,(k==='ho'?'HO: ':'Sales: ')+w,'');
+  const hi=all.filter(e=>e.pf>1800);if(hi.length)out.push({ok:true,t:`Info: PF above 1,800 for ${hi.length} employees — allowed by the sheet's own PF formula (days 1–16 capped at 960 + days 17–30 capped at 1,400); not an error`,d:''});
+  for(const[k,lb]of[['ho','HO'],['sales','Sales']]){const E=S[k].emps;if(!E.length||!E[0].hasFlag){out.push({ok:true,t:lb+': ESIC rule check skipped (ESIC flag / gross earnings column not found)',d:''});continue}
+    for(const[t,bp,f]of[['Employee ESIC',75,'esic'],['Employer ESIC',325,'eesic']]){const r=esicRule(E,bp,f),ok=!r.bad.length,rm=r.mods.length===1?r.mods[0]:'not distinguishable on this data';
+      ck(ok,`${lb}: ${t} follows a consistent rule — ${r.desc}; rounding ${rm}`,ok?`${r.N} of ${r.N} employees match`:`${r.bad.length} employee(s) do not match (${r.bad.slice(0,5).map(e=>e.code).join(', ')}) — a manual override, or the sheet's ESIC rule has changed; send the updated sheet so the rule can be added`);
+      if(f==='eesic'&&r.mods.length===1&&r.mods[0]==='ROUNDUP'&&($('#month').value||'')>='2026-10')ck(false,lb+': Employer ESIC values follow the old ROUNDUP rule, but the current sheet rule is ROUND — the file may not have been recalculated before saving','')}}
+  if(!n($('#jk').value))out.push({ok:false,t:'Promotor (JK) not entered — Sales Total (B) and Total exclude it',d:'',w:1});
+  return out}
+
+const NC='BCDEFGHIJKLMNOPQRS'.split(''),MSET='BCEFGHIJKLMN'.split('');
+const NH={B:'Gross Earning',C:'Extra/ Arrear',D:'Variable',E:'Gross Earning',F:'TDS',G:'EE PF',H:'EE ESIC',I:'Adv/Loan/Other Deduction',J:'Medical',K:'NPS',L:'HOLD',M:'Net Payout',N:'No. Of Manpowers',O:'Reimbursement Part',P:'Total Gross',Q:'Total Payout',R:'ER PF',S:'ER ESIC'};
+const fmode=()=>'fix';
+function leafVals(l,mode){const o=l.o,g=k=>n(o[k]),B=g('B'),C=g('C'),D=g('O'),F=g('E'),G=g('F'),H=g('G'),I=g('H'),J=g('I'),K=g('J'),Lh=g('K')+g('P'),O=g('N');
+  const E=B+C+D,Mv=E-(F+G+H+I+J+K+Lh);
+  return{B,C,D,E,F,G,H,I,J,K,L:Lh,M:Mv,N:g('M'),O,P:E+O,Q:Mv+O,R:g('U'),S:g('V')}}
+function lineVals(M,l,mode,c){if(c[l.id])return c[l.id];let v;
+  if(l.kind==='row'||l.kind==='memo')v=leafVals(l,mode);
+  else{const kids=l.kind==='sum'?M.L.filter(x=>x.id>=l.from.id&&x.id<=l.to.id):l.parts;v={};for(const k of NC)v[k]=kids.reduce((a,x)=>a+n(lineVals(M,x,mode,c)[k]),0)}
+  return c[l.id]=v}
+function fnoteDraw(M){$('#fnote').innerHTML='<div class="msg ok">Approved formula set — Gross Earning = Gross + Arrear + Variable; Net Payout = Gross Earning − deductions − hold; Total Gross = Gross Earning + Reimbursement; Total Payout = Net Payout + Reimbursement.</div>'}
+const ckHtml=cs=>cs.map(c=>`<div class="msg ${c.ok?'ok':'wr'}">${c.ok?'✔':'⚠'} ${esc(c.t)}${c.d?' — '+esc(c.d):''}</div>`).join('');
+const colsOf=l=>l.m||l.kind==='memo'?MSET:NC;
+function render(){
+  const ready=S.ho&&S.sales;$('#msgs').innerHTML='';
+  if(!ready){['pg-over','pg-dept','pg-sales','pg-ded','holdcard','loancard','outcard','miscard','tabs'].forEach(i=>$('#'+i).hidden=true);return}
+  const M=model(),cs=checks(M);
+  const em=[...S.ho.emps,...S.sales.emps].filter(e=>e.rem);
+  $('#holdcard').hidden=!em.length;
+  $('#holdt').innerHTML='<tr><th>Hold</th><th>Code</th><th>Name</th><th>Department</th><th>Remark</th><th>Net Pay</th></tr>'+em.map(e=>`<tr><td><input type="checkbox" data-c="${esc(e.code)}" ${S.hold.has(e.code)?'checked':''}></td><td>${esc(e.code)}</td><td>${esc(e.name)}</td><td>${esc(e.dept)}</td><td>${esc(e.rem)}</td><td>${fmt(e.net)}</td></tr>`).join('');
+  document.querySelectorAll('#holdt input').forEach(i=>i.onchange=()=>{i.checked?S.hold.add(i.dataset.c):S.hold.delete(i.dataset.c);render()});
+  const lr=[...S.ho.emps,...S.sales.emps].filter(e=>e.loan!==0),sp=c=>S.split[c]||{p:'',i:''};
+  $('#loant').innerHTML=lr.length?'<tr><th>Code</th><th>Name</th><th>Department</th><th>Loan EMI (Amount)</th><th>Principal</th><th>Interest</th></tr>'+lr.map(e=>`<tr><td>${esc(e.code)}</td><td>${esc(e.name)}</td><td>${esc(e.dept)}</td><td>${fmt(e.loan)}</td><td><input type="number" style="width:110px" data-c="${esc(e.code)}" data-k="p" value="${esc(sp(e.code).p)}"></td><td><input type="number" style="width:110px" data-c="${esc(e.code)}" data-k="i" value="${esc(sp(e.code).i)}"></td></tr>`).join(''):'<tr><td>No loan deductions in the salary sheets this month.</td></tr>';
+  document.querySelectorAll('#loant input').forEach(i=>i.oninput=()=>{const c=i.dataset.c;S.split[c]={...sp(c),[i.dataset.k]:i.value};$('#checks').innerHTML=ckHtml(checks(M))});
+  $('#outcard').hidden=false;$('#checks').innerHTML=ckHtml(cs);
+  $('#miscard').hidden=false;
+  const LV=(c=>l=>lineVals(M,l,fmode(),c))({});
+  const hdr=t=>'<tr><th>'+t+'</th>'+NC.map(k=>`<th>${NH[k]}</th>`).join('')+'</tr>';
+  $('#mis').innerHTML=hdr('HO & Directors')+M.L.map(l=>{const v=LV(l),cs=colsOf(l),ip=(l.inp||[]).map(x=>x==='M'?'N':x);
+    return(l===M.sRows[0]?hdr('Sales'):'')+`<tr class="${l.t?'t':''}"><td>${esc(l.label)}</td>${NC.map(k=>`<td class="${ip.includes(k)&&!v[k]?'in':''}">${cs.includes(k)?fmt(v[k]):''}</td>`).join('')}</tr>`}).join('');
+  const KT=[M.grand.o,M.totS.o];$('#kpi').innerHTML=[['Total Manpower',KT[0].M+KT[1].M],['Total Gross',fmt(KT[0].Q+KT[1].Q)],['Total Payout',fmt(KT[0].R+KT[1].R)],['Hold (net)',fmt(KT[0].K+KT[0].P+KT[1].K+KT[1].P)]].map(([a,b])=>`<div class="kpi"><small>${a}</small><b>${b}</b></div>`).join('');
+  fnoteDraw(M);S.M=M;drawDash(M)}
+
+const PAGES=[['over','Overview','pg-over'],['dept','HO Departments','pg-dept'],['sales','Sales','pg-sales'],['ded','Deductions & Hold','pg-ded'],['hold','Hold Review','holdcard'],['loan','Loan Split','loancard'],['chk','Checks','outcard'],['mis','MIS Report','miscard']];
+function showPage(p){S.page=p;PAGES.forEach(([k,,id])=>$('#'+id).hidden=k!==p);document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.p===p))}
+const bar=(v,max,l)=>`<div class="br"><span title="${esc(l)}">${esc(l)}</span><div class="bt"><i style="width:${max>0?Math.max(1,Math.min(100,v/max*100)):0}%"></i></div><b>${fmt(v)}</b></div>`;
+const tb=(h,rows)=>`<div class="scroll"><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table></div>`;
+function dashData(M){const G=M.totAB.o,SS=M.totS.o,tot=k=>n(G[k])+n(SS[k]),ln=l=>({label:l.label.replace(' (B)',''),M:n(l.o.M),B:n(l.o.B),Q:n(l.o.Q),R:n(l.o.R),K:n(l.o.K)+n(l.o.P)});
+  const ded=[['TDS','E'],['PF (employee)','F'],['ESIC (employee)','G'],['Loans / Advances / Other','H'],['NPS','J']].map(([a,k])=>[a,tot(k)]);
+  const held=[...S.ho.emps,...S.sales.emps].filter(e=>S.hold.has(e.code)),by={};held.forEach(e=>{const k=e.rem||'(none)',o=by[k]=by[k]||[k,0,0];o[1]++;o[2]+=e.net});
+  return{G,SS,tot,ho:[...M.hoRows,M.dir].filter(l=>l.o.M).map(ln),sl:M.sRows.map(ln),ded,gross:tot('D')+tot('O'),hold:Object.values(by).sort((a,b)=>b[2]-a[2]),heldN:held.length}}
+function drawDash(M){const D=dashData(M),{G,SS,tot}=D,T=title(),pc=(a,b)=>b?(a/b*100).toFixed(1)+'%':'-',avg=(a,m)=>fmt(m?a/m:0);
+  const kp=(a,b,s)=>`<div class="kpi"><small>${a}</small><b>${b}</b>${s?`<small>${s}</small>`:''}</div>`,dsum=D.ded.reduce((a,x)=>a+x[1],0),mx=Math.max(...D.ho.map(x=>x.R),1),dm=Math.max(...D.ded.map(x=>x[1]),tot('K'),1),sm=Math.max(G.R,SS.R,1);
+  $('#pg-over').innerHTML=`<h2>Overview — ${esc(T?T.full:'')}</h2><div class="kpis">${kp('Total Manpower',tot('M'),`HO & Directors ${G.M} · Sales ${SS.M}`)}${kp('Total Gross',fmt(tot('Q')))}${kp('Total Payout',fmt(tot('R')))}${kp('Deductions',fmt(dsum),pc(dsum,D.gross)+' of gross earning')}${kp('Hold (withheld)',fmt(tot('K')+tot('P')),D.heldN+' employees')}${kp('Avg payout / head',avg(tot('R'),tot('M')))}</div>
+  <div class="two"><div><h3>Total payout by HO department</h3>${D.ho.map(x=>bar(x.R,mx,x.label)).join('')}</div><div><h3>Deductions & hold (HO + Sales)</h3>${D.ded.map(x=>bar(x[1],dm,x[0])).join('')}${bar(tot('K'),dm,'Hold (withheld)')}<h3>HO vs Sales total payout</h3>${bar(G.R,sm,'HO & Directors')}${bar(SS.R,sm,'Sales')}</div></div><p><button class="exd">Export Dashboard Summary (Excel)</button> <span id="expmsg2" class="sub"></span></p>`;
+  $('#pg-dept').innerHTML='<h2>HO departments</h2>'+tb(['Department','Manpower','Net Earning','Total Gross','Total Payout','Avg payout / head','Share of HO payout'],D.ho.map(x=>[esc(x.label),x.M,fmt(x.B),fmt(x.Q),fmt(x.R),avg(x.R,x.M),`<div class="bt" style="display:inline-block;width:90px;vertical-align:middle"><i style="width:${G.R?x.R/G.R*100:0}%"></i></div> ${pc(x.R,G.R)}`]).concat([[`<b>Total HO & Directors</b>`,G.M,fmt(G.B),fmt(G.Q),fmt(G.R),avg(G.R,G.M),'100%']]));
+  $('#pg-sales').innerHTML='<h2>Sales</h2>'+tb(['Channel','Manpower','Net Earning','Total Gross','Total Payout','Avg payout / head','Hold'],D.sl.map(x=>[esc(x.label),x.M,fmt(x.B),fmt(x.Q),fmt(x.R),avg(x.R,x.M),fmt(x.K)]).concat([['<b>Total (A)</b>',SS.M,fmt(SS.B),fmt(SS.Q),fmt(SS.R),avg(SS.R,SS.M),fmt(n(SS.K)+n(SS.P))]]))+`<p class="sub">Promotor (JK): ${n($('#jk').value)?'entered — included in MIS Total (B) and Total.':'not entered — Sales Total (B) and Total exclude it.'}</p>`;
+  $('#pg-ded').innerHTML='<h2>Deductions & hold</h2><div class="two"><div>'+tb(['Deduction','Amount','% of gross earning'],D.ded.map(x=>[x[0],fmt(x[1]),pc(x[1],D.gross)]).concat([['<b>Total deductions</b>',fmt(dsum),pc(dsum,D.gross)]]))+'</div><div>'+(D.hold.length?tb(['Hold reason (Remarks)','Employees','Net pay held'],D.hold.map(x=>[esc(x[0]),x[1],fmt(x[2])]).concat([['<b>Total held</b>',D.heldN,fmt(D.hold.reduce((a,x)=>a+x[2],0))]])):'<p class="sub">No employees held.</p>')+'</div></div>';
+  $('#tabs').innerHTML=PAGES.map(([k,l])=>`<button class="tab" data-p="${k}">${l}</button>`).join('');$('#tabs').hidden=false;showPage(S.page||'over')}
+async function saveBuf(buf,fn){let dl=null;try{dl=typeof claude!=='undefined'?await claude.use('downloads'):null}catch(e){}
+  if(dl)await dl.save({filename:fn,data:buf});else{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([buf],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));a.download=fn;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000)}}
+async function exportDash(){const T=title(),msg={set textContent(t){$('#expmsg2').textContent=t;$('#expmsg').textContent=t}};if(!S.M)return;if(!T){msg.textContent='Select the MIS month first.';return}
+  await window.LIBS;if(typeof ExcelJS==='undefined'){msg.textContent='The Excel writer library could not be loaded.';return}
+  const D=dashData(S.M),{G,SS,tot}=D,wb=new ExcelJS.Workbook(),NF='#,##0;(#,##0);-';
+  const sh=(name,head,rows,w)=>{const ws=wb.addWorksheet(name),h=ws.addRow(head);h.font={bold:true};h.eachCell(c=>{c.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FFFBF0D4'}};c.border={bottom:{style:'thin'}}});rows.forEach(r=>ws.addRow(r).eachCell(c=>{if(typeof c.value==='number')c.numFmt=NF}));w.forEach((x,i)=>ws.getColumn(i+1).width=x)};
+  sh('Summary',['Metric',T.full],[['Total Manpower',tot('M')],['HO & Directors manpower',G.M],['Sales manpower',SS.M],['Total Gross',tot('Q')],['Total Payout',tot('R')],['HO & Directors Total Payout',G.R],['Sales Total Payout',SS.R],...D.ded,['Hold (net pay withheld)',tot('K')+tot('P')],['Employees on hold',D.heldN],['Employer PF (ER PF)',tot('U')],['Employer ESIC (ER ESIC)',tot('V')],['Avg payout per head',tot('M')?Math.round(tot('R')/tot('M')):0],['Promotor (JK) included',n($('#jk').value)?'Yes':'No — not entered']],[34,20]);
+  sh('HO Departments',['Department','Manpower','Net Earning','Total Gross','Total Payout','Hold'],[...D.ho.map(x=>[x.label,x.M,x.B,x.Q,x.R,x.K]),['Total HO & Directors',G.M,G.B,G.Q,G.R,n(G.K)+n(G.P)]],[30,12,16,16,16,14]);
+  sh('Sales',['Channel','Manpower','Net Earning','Total Gross','Total Payout','Hold'],[...D.sl.map(x=>[x.label,x.M,x.B,x.Q,x.R,x.K]),['Total (A)',SS.M,SS.B,SS.Q,SS.R,n(SS.K)+n(SS.P)]],[26,12,16,16,16,14]);
+  sh('Deductions',['Deduction','Amount','% of gross earning'],D.ded.map(x=>[x[0],x[1],D.gross?+(x[1]/D.gross*100).toFixed(2):0]),[30,16,18]);
+  sh('Hold by remark',['Remarks','Employees','Net pay held'],D.hold,[34,12,16]);
+  try{const fn=`Dashboard_Summary_${T.mon}_${T.y}.xlsx`;await saveBuf(await wb.xlsx.writeBuffer(),fn);msg.textContent='Export ready: '+fn}catch(e){msg.textContent=e&&e.code==='declined'?'Save cancelled.':'Export failed: '+(e&&e.message||e)}}
+document.addEventListener('click',e=>{if(e.target.classList&&e.target.classList.contains('exd'))exportDash()});
+function dedRows(M,orem,nz){const o=[];for(const E of[M.ho,M.sl])for(const k of['loan','adv','oth'])for(const e of E)if(e[k]!==0){const sp=S.split[e.code]||{};
+    o.push([e.code,e.name,e.dept,e[k],k==='loan'?nz(sp.p):null,k==='loan'?nz(sp.i):null,k==='oth'?orem:null])}return o}
+function title(){const v=$('#month').value;if(!v)return null;const[y,m]=v.split('-');return{mon:MON[+m-1],y,full:MON[+m-1]+', '+y,sheet:MON[+m-1]+', '+y.slice(2)}}
+async function exportX(){
+  const T=title(),msg=$('#expmsg');if(!T){msg.textContent='Select the MIS month first.';return}
+  await window.LIBS;if(typeof ExcelJS==='undefined'){msg.textContent='The Excel writer library could not be loaded (network may block cdnjs.cloudflare.com / cdn.jsdelivr.net).';return}
+  let dl=null;try{dl=typeof claude!=='undefined'?await claude.use('downloads'):null}catch(e){}
+  const M=S.M,wb=new ExcelJS.Workbook(),ws=wb.addWorksheet(T.sheet),thin={style:'thin',color:{argb:'FF808080'}},bd={top:thin,left:thin,bottom:thin,right:thin};
+  const NF='#,##0;\\(#,##0\\);\\-',mode=fmode(),cache={},LVe=l=>lineVals(M,l,mode,cache),cell=(r,c)=>ws.getCell(r,c),col=k=>NC.indexOf(k)+2,fill=a=>({type:'pattern',pattern:'solid',fgColor:{argb:a}});
+  let r=1;const rowOf={};
+  const hstyle=(rr,c1,c2)=>{for(let c=c1;c<=c2;c++){const x=cell(rr,c);x.font={bold:true};x.alignment={horizontal:'center',vertical:'middle',wrapText:true};x.border=bd;x.fill=fill('FFD9E1F2')}};
+  const header=(lbl,first)=>{ws.mergeCells(r,1,r+1,1);cell(r,1).value=lbl;cell(r,2).value=T.full;hstyle(r,1,first?17:19);NC.forEach(k=>cell(r+1,col(k)).value=NH[k]);hstyle(r+1,2,19);['R','S'].forEach(k=>{cell(r+1,col(k)).border={left:thin,right:thin}});cell(r+1,1).border={left:thin,bottom:thin,right:thin};ws.getRow(r+1).height=29;r+=2};
+  header('HO & Directors',1);
+  const put=l=>{const R=rowOf;R[l.id]=r;const v=LVe(l),cs=colsOf(l),lb=!!l.t||/^Directors/.test(l.label),bk=(l===M.totA||l===M.totAB)?'BCDFGHIJKLMNOP':l===M.totS?'BCDEFGHIJKLMNOP':(l===M.totC||l===M.tot)?'BCEFGHIJKLMN':'';
+    const fx=k=>{
+      if(l.kind==='row')return({E:`SUM(B${r}:D${r})`,M:`E${r}-SUM(F${r}:L${r})`,P:`E${r}+O${r}`,Q:`M${r}+O${r}`})[k]||null;
+      if(l.kind==='memo'){if(k==='E')return`B${r}+C${r}`;if(k==='M')return`E${r}-SUM(F${r}:L${r})`;
+        if(k==='B'){if(l.label.startsWith('Service'))return`ROUND((B${R[M.jk.id]}+B${R[M.hra.id]})*3%,0)`;if(l.label==='EPF@13%')return`B${R[M.jk.id]}*13%`;if(l.label.startsWith('ESIC @'))return`ROUND((B${R[M.jk.id]}+B${R[M.hra.id]})*3.25%,0)`}return null}
+      if(l.kind==='sum'){const a=R[l.from.id],b=R[l.to.id];if(!l.m&&k==='E'&&l!==M.totS)return`SUM(B${r}:D${r})`;if(!l.m&&k==='Q')return`M${r}+O${r}`;return`SUM(${k}${a}:${k}${b})`}
+      if(l.kind==='add')return l.parts.map(p=>k+R[p.id]).join('+');return null};
+    cell(r,1).value=l.label;cell(r,1).border=bd;cell(r,1).font={bold:lb};
+    cs.forEach(k=>{const x=cell(r,col(k)),ff=fx(k),val=v[k];x.value=ff?{formula:ff,result:val}:val;x.numFmt=NF;x.alignment={horizontal:'center'};x.border=bd;x.font={bold:bk.includes(k)}});
+    (l.inp||[]).map(k=>k==='M'?'N':k).forEach(k=>{if(!v[k])cell(r,col(k)).fill=fill('FFFFFF00')});r++};
+  M.L.forEach(l=>{if(l===M.sRows[0])header('Sales');put(l)});
+  if(!n($('#jk').value)){const x=cell(rowOf[M.jk.id],19);x.value='<< INPUT REQUIRED: Promotor (JK) / HRA / Hiring Fee not entered — TOTAL (B) and Total exclude it.';x.font={bold:true,color:{argb:'FFFF0000'}}}
+  ws.getColumn(1).width=34;NC.forEach(k=>ws.getColumn(col(k)).width=k==='B'||k==='E'||k==='F'?16:15);ws.views=[{state:'frozen',xSplit:1,ySplit:2}];
+  // HOLD & TDS (approved layout)
+  const hs=wb.addWorksheet('HOLD&TDS'),all=[...M.ho,...M.sl],tb1={style:'thin'},tbd={top:tb1,left:tb1,bottom:tb1,right:tb1};let q=1;
+  const block=(ttl,list,hd)=>{const nc=hd.length;hs.mergeCells(q,1,q,nc);const t=hs.getCell(q,1);t.value=ttl;t.font={bold:true,size:12};t.alignment={horizontal:'center'};q++;
+    hd.forEach((h,i)=>{const x=hs.getCell(q,i+1);x.value=h;x.font={bold:true};x.border=tbd;x.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FFD9E1F2'}}});q++;let t2=0;
+    list.forEach((a,i)=>{const vals=[i+1,...a];for(let j=0;j<Math.max(nc,vals.length);j++){const v=vals[j]??null,x=hs.getCell(q,j+1);if(v!==null&&v!=='')x.value=v;if(j===4)x.numFmt=NF;if(j<nc||(v!==null&&v!==''))x.border=tbd}t2+=a[3]||0;q++});
+    for(let j=1;j<=nc;j++)hs.getCell(q,j).border=tbd;hs.getCell(q,1).value='Total';hs.getCell(q,5).value=t2;hs.getCell(q,5).numFmt=NF;hs.getCell(q,1).font=hs.getCell(q,5).font={bold:true};q+=2};
+  const nz=x=>{const s=String(x??'').trim();return s===''||isNaN(+s)?null:+s},orem=String($('#othrem').value||'').trim()||null;
+  block('Hold '+T.full,all.filter(e=>S.hold.has(e.code)).map(e=>[e.code,e.name,e.dept,e.net,e.rem]),['S.No.','Emp ID','Name','Dept.','Net Pay Held','Remarks']);
+  block('TDS '+T.full,all.filter(e=>e.tds!==0).map(e=>[e.code,e.name,e.dept,e.tds]),['S.No.','Emp ID','Name','Dept.','Amount']);
+  block('Deductions '+T.full,dedRows(M,orem,nz),['S.No.','Emp ID','Name','Dept.','Amount','Principal','Interest']);
+  block('NPS '+T.full,all.filter(e=>e.nps!==0).map(e=>[e.code,e.name,e.dept,e.nps]),['S.No.','Emp ID','Name','Dept.','Amount']);
+  [8,12,30,26,16,22,12,30].forEach((w,i)=>hs.getColumn(i+1).width=w);
+  // Checks
+  const cs=wb.addWorksheet('Checks');cs.getColumn(1).width=100;cs.getCell(1,1).value='Cross-checks run at export — '+T.full;cs.getCell(1,1).font={bold:true,size:12};
+  checks(M).forEach((c,i)=>cs.getCell(i+3,1).value=(c.ok?'OK  ':'REVIEW  ')+c.t+(c.d?' — '+c.d:''));
+  try{const buf=await wb.xlsx.writeBuffer(),fn=`Salary_MIS_HO_Sales_${T.mon}_${T.y}.xlsx`;
+    if(dl)await dl.save({filename:fn,data:buf});else{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([buf],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));a.download=fn;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000)}
+    msg.textContent='Export ready: '+fn}
+  catch(e){msg.textContent=e?.code==='declined'?'Save cancelled.':'Export failed: '+(e?.message||e)}}
+wire('ho');wire('sales');$('#exp').onclick=exportX;$('#rst').onclick=()=>location.reload();$('#tabs').onclick=e=>{const p=e.target.dataset&&e.target.dataset.p;if(p)showPage(p)};
+$('#sub').onclick=async()=>{const b=$('#sub');b.disabled=true;b.textContent='Building…';await parseKind('ho');await parseKind('sales');b.textContent='Submit & Build MIS';b.disabled=false;
+  if(S.ho&&S.sales)$('#miscard').scrollIntoView({behavior:'smooth'});else $('#msgs').innerHTML='<div class="msg er">Could not build the MIS — fix the file error shown above and submit again.</div>'};
+['jk','jkm','hra','hire','dirc','month'].forEach(i=>$('#'+i).oninput=()=>S.ho&&S.sales&&render());
+function showErr(m){$('#sys').innerHTML+=`<div class="msg er">⚠ Unexpected error: ${esc(m)} — please send this message to support.</div>`}
+window.addEventListener('error',e=>showErr(e.message));window.addEventListener('unhandledrejection',e=>showErr(e.reason?.message||e.reason));
+(async()=>{await window.LIBS;const bad=[];if(!window.XLSX)bad.push('Excel reader');if(!window.ExcelJS)bad.push('Excel writer');
+  $('#sys').innerHTML=bad.length?`<div class="msg er">⚠ Could not load: ${bad.join(', ')}. Your network may block cdnjs.cloudflare.com / cdn.jsdelivr.net — ask IT to allow them or try another network. Uploading and exporting will not work until they load.</div>`:'<div class="msg ok">✔ System check passed: Excel reader and writer loaded.</div>'})();
+</script></body></html>
